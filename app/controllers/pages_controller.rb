@@ -4,4 +4,14 @@ class PagesController < ApplicationController
 
   def about
   end
+
+  def program
+  end
+
+  def flash
+  end
+
+  def music
+  end
+
 end
