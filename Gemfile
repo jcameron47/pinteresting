@@ -28,6 +28,10 @@ gem 'jbuilder', '~> 1.2'
 	#bootstrap sass gem
 gem 'bootstrap-sass', :github => "twbs/bootstrap-sass"
 
+#users
+gem 'devise'
+# , '~> 3.1.0.rc2'
+
 	# Use sqlite3 as the database for Active Record
 group :development, :test do
 	gem 'sqlite3'
