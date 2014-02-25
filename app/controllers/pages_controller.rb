@@ -8,7 +8,7 @@ class PagesController < ApplicationController
   def program
   end
 
-  def flash
+  def flashani
   end
 
   def music

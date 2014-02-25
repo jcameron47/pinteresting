@@ -3,7 +3,7 @@ Pinteresting::Application.routes.draw do
   root "pages#home"
   get "about" => "pages#about"
   get "program" => "pages#program"
-  get "flash" => "pages#flash"
+  get "flashani" => "pages#flashani"
   get "music" => "pages#music"
 
   # The priority is based upon order of creation: first created -> highest priority.

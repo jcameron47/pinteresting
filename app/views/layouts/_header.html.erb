@@ -22,6 +22,7 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Works <b class="caret"></b></a>
           <ul class="dropdown-menu">
             <% if user_signed_in? %>
+              <li><%= link_to "Account Settings", edit_user_registration_path %></li>
               <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
               <% else %>
                 <li><%= link_to "Sign In", new_user_session_path %></li>
@@ -39,7 +40,7 @@
         <li><%= link_to "Home", root_path %></li>
         <li><%= link_to "About Me", about_path %></li>
         <li><%= link_to "Programming", program_path %></li>
-        <li><%= link_to "Flash", flash_path %></li>
+        <li><%= link_to "Flash", flashani_path %></li>
         <li><%= link_to "Music", music_path %></li>
         <% if user_signed_in? %>
           <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
