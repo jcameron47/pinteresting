@@ -6,8 +6,13 @@
 	<h2>Jonny - V2.47</h2>
 	  <p>Welcome to my site. I have really known that to be truly free, I need a place where I can do whatever I want. This is that place.</p>
 		<p>Caution - Enter at your own risk!</p>
-		<p><%= link_to "Login", new_user_session_path, class: "btn btn-primary" %></p>
-		<p><%= link_to "Sign up", new_user_registration_path, class: "btn btn-info" %></p>
+		
+		<% if user_signed_in? %>
+			<p>- currently logged in - </p>
+		<% else %>
+			<p><%= link_to "Login", new_user_session_path, class: "btn btn-primary" %></p>
+			<p><%= link_to "Sign up", new_user_registration_path, class: "btn btn-info" %></p>
+		<% end %>
 </div>
 	
 
