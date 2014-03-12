@@ -12,7 +12,7 @@ class PinsController < ApplicationController
 
 
   def new
-    @pin = Pin.new
+    @pin = current_user.pins.build  #creates pin associating with user
   end
 
 
@@ -21,7 +21,7 @@ class PinsController < ApplicationController
 
 
   def create
-    @pin = Pin.new(pin_params)
+    @pin = current_user.pins.build(pin_params)
     if @pin.save
       redirect_to @pin, notice: 'Pin was successfully created.'
     else
@@ -52,6 +52,6 @@ class PinsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pin_params
-      params.require(:pin).permit(:description, :string)
+      params.require(:pin).permit(:description, :image)
     end
 end
